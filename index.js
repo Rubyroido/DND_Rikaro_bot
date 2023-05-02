@@ -127,8 +127,8 @@ bot.on('message', (msg) => {
 
 	//голова 
 	if (lowCaseWords.includes('голова')) {
-		let randomNumber = Math.floor(Math.random() * 10);
-		if (randomNumber === 1) {
+		const randomNumber = Math.random();
+		if (randomNumber < 0.1) {
 			bot.sendPhoto(chatId,
 				'https://w7.pngwing.com/pngs/1024/859/png-transparent-trollface-rage-comic-internet-troll-internet-meme-frustrated-troll-face-comics-white-face.png',
 				{
