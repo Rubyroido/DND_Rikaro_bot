@@ -135,7 +135,7 @@ bot.on('message', (msg) => {
 					caption: `О, голова это - <a href="tg://user?id=284965409">Никита</a>`,
 					parse_mode: 'HTML'
 				})
-				.tnen((m) => {
+				.then((m) => {
 					setTimeout(() => {
 						bot.deleteMessage(chatId, m.message_id)
 					}, deleteTimer)
