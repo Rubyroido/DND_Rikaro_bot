@@ -87,6 +87,18 @@ bot.on('message', (msg) => {
 			})
 			.catch(err => console.log(err))
 	}
+	if (text === '/magic' || text === 'Магия') {
+		bot.deleteMessage(chatId, messageId);
+		bot.sendMessage(chatId,
+			'Твоя личная книга заклинаний <a href="https://rubyroido.github.io/Spellbook/">тут</a>. Просматривать и сохранять заклинания можно прямо в браузере. (Сохраненные заклинания хранятся в памяти отдельного браузера)',
+			{ parse_mode: 'HTML' })
+			.then((m) => {
+				setTimeout(() => {
+					bot.deleteMessage(chatId, m.message_id)
+				}, deleteTimer)
+			})
+			.catch(err => console.log(err))
+	}
 
 	// реакция на вход в группу 
 	if ('new_chat_members' in msg) {

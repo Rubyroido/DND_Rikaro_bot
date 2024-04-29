@@ -1,6 +1,6 @@
 const menuKeyboard = [
     [{ text: 'Лист' }, { text: 'Вики' }, { text: 'Дайсы' }],
-    [{ text: 'Книги' }, { text: 'Справочник' }]
+    [{ text: 'Книги' }, { text: 'Справочник' }, {text: 'Магия'}]
 ];
 
 const dicesKeyboard = [
